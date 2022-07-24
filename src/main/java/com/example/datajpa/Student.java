@@ -3,7 +3,7 @@ package com.example.datajpa;
 import javax.persistence.*;
 
 @Entity(name = "Student")
-@Table(name = "student, " ,
+@Table(name = "student" ,
        uniqueConstraints = {
         @UniqueConstraint(name = "student_email_unique", columnNames = "email")
        })
@@ -93,13 +93,6 @@ public class Student {
         this.age = age;
     }
 
-    public Student(Long id, String firstName, String lastName, String email, Integer age) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.age = age;
-    }
 
     public Student(String firstName, String lastName, String email, Integer age) {
         this.firstName = firstName;
