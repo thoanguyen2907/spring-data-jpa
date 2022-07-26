@@ -34,15 +34,18 @@ public class StudentIdCard {
 
     @Column(
             name = "card_number",
-            nullable = false,
-            length = 15
+            nullable = false
+
     )
     private String cardNumber;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(
             name = "student_id",
-            referencedColumnName = "id"
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(
+                    name = "student_id_card_student_id_fk"
+            )
     )
     private Student student;
 
@@ -56,6 +59,9 @@ public class StudentIdCard {
     }
 
     public StudentIdCard() {
+    }
+
+    public StudentIdCard(int random_int, Student student) {
     }
 
     public Long getId() {
