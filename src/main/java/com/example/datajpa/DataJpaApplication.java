@@ -38,6 +38,9 @@ public class DataJpaApplication {
 			                    new Book("Think and Grow Rich", LocalDateTime.now()));
 	         student.addBook(
 	                             new Book("Spring Data JPA", LocalDateTime.now().minusYears(1)));
+			 student.enrolToCourse(new Course("Computer Science", "IT"));
+			 	 student.enrolToCourse(new Course("Finance", "Finance"));
+
 		    //int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
 		    //StudentIdCard studentIdCard = new StudentIdCard(random_int ,student);
 		    //student.setStudentIdCard(studentIdCard);
