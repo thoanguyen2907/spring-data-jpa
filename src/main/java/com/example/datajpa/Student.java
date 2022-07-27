@@ -67,7 +67,6 @@ public class Student {
     @OneToMany(
             cascade = {CascadeType.PERSIST, CascadeType.REMOVE}
     )
-
     private List<Enrolment> enrolments = new ArrayList<Enrolment>();
 
 
@@ -142,14 +141,9 @@ public class Student {
             enrolments.add(enrolment);
         }
     }
-
     public void removeEnrolment(Enrolment enrolment){
-
             enrolments.remove(enrolment);
-
     }
-
-
     public Student(String firstName, String lastName, String email, Integer age) {
         this.firstName = firstName;
         this.lastName = lastName;
